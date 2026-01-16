@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Impressionen – Hanf Kontor Weimar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary: #16523a;
+            --primary-light: #1f7a52;
+            --bg: #f5f5f5;
+            --text: #222222;
+            --muted: #666666;
+            --max-width: 1100px;
+            --radius: 8px;
+            --shadow-soft: 0 4px 16px rgba(0,0,0,0.05);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0.5rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.25rem;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1.5rem 1.25rem 2.5rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        p.lead {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-caption {
+            padding: 0.5rem 0.75rem 0.9rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        footer {
+            border-top: 1px solid #e0e0e0;
+            padding: 1rem 1.25rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        .footer-links a:hover { color: var(--primary); }
+
+        @media (max-width: 640px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav">
+        <div class="brand-title">Hanf Kontor Weimar</div>
+        <nav class="nav-links">
+            <a href="index.html">Startseite</a>
+            <a href="index.html#sortiment">Sortiment</a>
+            <a href="index.html#oeffnungszeiten">Öffnungszeiten</a>
+            <a href="index.html#kontakt">Kontakt</a>
+            <a href="impressum.html">Impressum &amp; Datenschutz</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <h1>Impressionen</h1>
+    <p class="lead">
+        Ein Blick in das Hanf Kontor Weimar: Außenansicht, Schaufenster und eine Auswahl
+        unseres Sortiments im Innenbereich.
+    </p>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="20260115_145641.jpg" alt="Eingangstür Hanf Kontor Weimar">
+            <div class="gallery-caption">Eingang zum Hanf Kontor Weimar in der Karl-Liebknecht Straße.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="20260115_145648.jpg" alt="Schaufenster Hanf Kontor Weimar">
+            <div class="gallery-caption">Schaufenster mit Logo und ausgewählten Produkten.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="20260115_145731.jpg" alt="Regale mit Hanfprodukten und Zubehör">
+            <div class="gallery-caption">Regale mit Hanfkosmetik, Lebensmitteln, Textilien und Zubehör.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="20260115_145739.jpg" alt="Theke und Präsentation von Glasbongs">
+            <div class="gallery-caption">Innenansicht mit Glasbongs und Zubehör.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="20260115_145816.jpg" alt="Vitrinen mit Zubehör und Clipper Feuerzeugen">
+            <div class="gallery-caption">Vitrinen mit einer großen Auswahl an Zubehör und Clipper-Produkten.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="20260115_145826.jpg" alt="Clipper Feuerzeug Wand">
+            <div class="gallery-caption">Ein Teil unseres großen Clipper-Angebots in Thüringen.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="20260115_145831.jpg" alt="Regale mit Kopfzubehör und Bongs">
+            <div class="gallery-caption">Weitere Regale mit Köpfen, Bongs und Zubehör.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="20260115_145843.jpg" alt="Display mit Taschen und Textilien">
+            <div class="gallery-caption">Taschen, Rucksäcke und Textilien aus Hanf und Mischgewebe.</div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div>© 2026 Hanf Kontor Weimar – Inhaber: Matthias Stelzer</div>
+        <div class="footer-links">
+            <a href="index.html">Startseite</a>
+            <a href="impressum.html">Impressum &amp; Datenschutz</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

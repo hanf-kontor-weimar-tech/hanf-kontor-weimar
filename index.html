@@ -14,7 +14,7 @@
             --muted: #666666;
             --max-width: 1100px;
             --radius: 8px;
-            --shadow-soft: 0 4px 16px rgba(0,0,0,0.05);
+            --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.05);
         }
 
         * { box-sizing: border-box; }
@@ -128,6 +128,27 @@
 
         .contact-card p { margin: 0.3rem 0; }
 
+        /* Infofeld / Aktionsbox */
+        .alert-box {
+            background: #ffefc2;
+            border-left: 6px solid #e0a800;
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 2rem;
+        }
+        .alert-box strong {
+            color: #8a6c00;
+        }
+        .alert-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+
         footer {
             border-top: 1px solid #e0e0e0;
             padding: 1rem 1.25rem;
@@ -176,6 +197,7 @@
             <a href="#sortiment">Sortiment</a>
             <a href="#oeffnungszeiten">Öffnungszeiten</a>
             <a href="impressionen.html">Impressionen</a>
+            <a href="#info">Aktuelles</a>
             <a href="#kontakt">Kontakt</a>
             <a href="impressum.html">Impressum</a>
         </nav>
@@ -210,6 +232,15 @@
         <div class="info-label">Hinweis</div>
         Alle angebotenen Produkte entsprechen den geltenden deutschen Gesetzen.
     </aside>
+</section>
+
+<!-- Aktuelles / Infofeld mit Freibier-Bild -->
+<section id="info">
+    <div class="alert-box">
+        <img src="aktion-freibier.png" alt="Freibier-Aktion Hanf Kontor Weimar">
+        <strong>Aktion:</strong> Ab 15 € Einkauf gibt es eine Flasche Cannabis Bier gratis – 
+        Aktion nur solange der Vorrat reicht.
+    </div>
 </section>
 
 <section>

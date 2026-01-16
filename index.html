@@ -14,7 +14,7 @@
             --muted: #666666;
             --max-width: 1100px;
             --radius: 8px;
-            --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.05);
+            --shadow-soft: 0 4px 16px rgba(0,0,0,0.05);
         }
 
         * { box-sizing: border-box; }
@@ -27,11 +27,7 @@
             line-height: 1.6;
         }
 
-        a {
-            color: var(--primary-light);
-            text-decoration: none;
-        }
-
+        a { color: var(--primary-light); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
         header {
@@ -49,7 +45,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 1rem;
         }
 
         .brand-block {
@@ -63,44 +58,15 @@
             width: auto;
         }
 
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-        }
+        .brand-text { display: flex; flex-direction: column; }
+        .brand-title { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
+        .brand-sub { font-size: 0.9rem; color: var(--muted); }
 
-        .brand-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: var(--primary);
-        }
-
-        .brand-sub {
-            font-weight: 400;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.25rem;
-            font-size: 0.95rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: var(--muted);
-            font-weight: 500;
-        }
-
+        .nav-links { display: flex; gap: 1.25rem; font-size: 0.95rem; }
+        .nav-links a { color: var(--muted); font-weight: 500; }
         .nav-links a:hover { color: var(--primary); }
 
-        main {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 1.5rem 1.25rem 2.5rem;
-        }
+        main { max-width: var(--max-width); margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; }
 
         .hero {
             display: grid;
@@ -111,35 +77,17 @@
             align-items: center;
         }
 
-        .hero-text h1 {
-            font-size: clamp(2rem, 3vw, 2.6rem);
-            margin: 0 0 0.75rem;
-            color: var(--primary);
-        }
+        .hero-text h1 { font-size: clamp(2rem, 3vw, 2.6rem); margin-bottom: 0.75rem; color: var(--primary); }
+        .hero-text h2 { font-size: 1.1rem; color: var(--muted); margin-bottom: 1rem; }
 
-        .hero-text h2 {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin: 0 0 1rem;
-            color: var(--muted);
-        }
-
-        .hero-text p { margin: 0 0 1rem; }
-
-        .hero-highlights {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-        }
-
+        .hero-highlights { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
         .pill {
             padding: 0.3rem 0.75rem;
             border-radius: 999px;
             background: #e6f1e5;
-            font-size: 0.85rem;
             color: var(--primary);
             border: 1px solid #d2e3d1;
+            font-size: 0.85rem;
         }
 
         .hero-box {
@@ -150,34 +98,14 @@
             border: 1px solid #d8e8dd;
         }
 
-        .info-label {
-            font-weight: 600;
-            color: var(--muted);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            margin-bottom: 0.3rem;
-        }
+        .info-label { font-weight: 600; color: var(--muted); margin-bottom: 0.3rem; font-size: 0.85rem; }
 
-        .hero-visual img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+        .hero-visual img { max-width: 100%; display: block; border-radius: var(--radius); }
 
-        section {
-            margin-bottom: 2.5rem;
-        }
+        section { margin-bottom: 2.5rem; }
+        section h2 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--primary); }
 
-        section h2 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        p.lead {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
+        .lead { color: var(--muted); font-size: 0.95rem; }
 
         .card {
             background: white;
@@ -187,103 +115,24 @@
             border: 1px solid #e5e5e5;
         }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1.5rem;
-        }
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 
-        .list-unstyled {
-            list-style: none;
-            padding: 0;
-        }
+        .list-unstyled { list-style: none; padding: 0; }
+        .list-unstyled li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
+        .list-unstyled li::before { content: "•"; position: absolute; left: 0; color: var(--primary); }
 
-        .list-unstyled li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.2rem;
-            position: relative;
-        }
+        .hours-table { width: 100%; border-collapse: collapse; }
+        .hours-table td, .hours-table th { padding: 0.4rem; text-align: left; }
+        .hours-table tbody tr:nth-child(odd) { background-color: #fafafa; }
 
-        .list-unstyled li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-        }
-
-        .hours-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .hours-table th,
-        .hours-table td {
-            padding: 0.4rem;
-            text-align: left;
-        }
-
-        .hours-table tbody tr:nth-child(odd) {
-            background-color: #fafafa;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
-            gap: 1.5rem;
-        }
-
-        form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem 1rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-
-        .form-group.full {
-            grid-column: 1 / -1;
-        }
-
-        label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--muted);
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            border-radius: 5px;
-            border: 1px solid #d8d8d8;
-            padding: 0.5rem 0.6rem;
-            background: #fcfcfc;
-        }
-
-        textarea { min-height: 110px; }
-
-        .btn {
-            padding: 0.6rem 1.2rem;
-            border-radius: 999px;
-            border: none;
-            background: var(--primary);
-            color: white;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .btn:hover {
-            background: var(--primary-light);
-        }
+        .contact-card p { margin: 0.3rem 0; }
 
         footer {
             border-top: 1px solid #e0e0e0;
             padding: 1rem 1.25rem;
             font-size: 0.8rem;
             color: var(--muted);
+            background: white;
         }
 
         .footer-inner {
@@ -291,39 +140,12 @@
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.5rem 1rem;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1rem;
             flex-wrap: wrap;
         }
-
-        .footer-links a {
-            color: var(--muted);
-            font-size: 0.8rem;
-        }
-
-        .footer-links a:hover { color: var(--primary); }
 
         @media (max-width: 800px) {
-            .hero, .grid-2, .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            form {
-                grid-template-columns: 1fr;
-            }
+            .hero { grid-template-columns: 1fr; }
+            .grid-2 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -332,7 +154,7 @@
 <header>
     <div class="nav">
         <div class="brand-block">
-            <img src="logo-hanfkontor.png" alt="Logo Hanf Kontor Weimar" class="logo">
+            <img src="logo-hanfkontor.png" class="logo" alt="Hanf Kontor Weimar Logo">
             <div class="brand-text">
                 <div class="brand-title">Hanf Kontor Weimar</div>
                 <div class="brand-sub">Lebensmittel · Kosmetik · Naturprodukte</div>
@@ -343,156 +165,86 @@
             <a href="#oeffnungszeiten">Öffnungszeiten</a>
             <a href="impressionen.html">Impressionen</a>
             <a href="#kontakt">Kontakt</a>
-            <a href="impressum.html">Impressum &amp; Datenschutz</a>
+            <a href="impressum.html">Impressum</a>
         </nav>
     </div>
 </header>
 
 <main>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Hanf Kontor Weimar</h1>
-            <h2>Seriöser Ansprechpartner für legale Hanfprodukte in Weimar</h2>
-            <p>
-                Im Hanf Kontor Weimar finden Sie eine sorgfältig ausgewählte Auswahl an legalen Hanfprodukten,
-                CBD-Artikeln sowie Zubehör rund um die Hanfpflanze. Wir legen Wert auf sachliche Beratung,
-                einen verantwortungsvollen Umgang mit dem Thema Hanf und ein angenehmes Einkaufsumfeld.
-            </p>
-            <p>
-                Auf dieser Seite erhalten Sie einen Überblick über unser Sortiment, unsere Öffnungszeiten
-                und die Kontaktmöglichkeiten.
-            </p>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hanf Kontor Weimar</h1>
+        <h2>Seriöser Ansprechpartner für legale Hanfprodukte in Weimar</h2>
+        <p>Im Hanf Kontor Weimar finden Sie eine sorgfältig ausgewählte Auswahl an legalen Hanfprodukten,
+        CBD-Artikeln sowie Zubehör rund um die Hanfpflanze.</p>
 
-            <div class="hero-highlights">
-                <span class="pill">Legale Hanfprodukte</span>
-                <span class="pill">CBD ohne Heilversprechen</span>
-                <span class="pill">Vaporizer &amp; Zubehör</span>
-                <span class="pill">Großes Clipper-Angebot in Thüringen</span>
-            </div>
-        </div>
-
-        <aside class="hero-box">
-            <div class="info-label">Adresse</div>
-            Karl-Liebknecht Str. 2A<br>
-            99423 Weimar
-            <br><br>
-            <div class="info-label">E-Mail</div>
-            hanf-kontor-weimar@online.de
-            <br><br>
-            <div class="info-label">Hinweis</div>
-            Alle angebotenen Produkte entsprechen den in Deutschland geltenden gesetzlichen Vorgaben.
-            Es werden keine Tabakwaren und keine Produkte mit berauschender Wirkung angeboten.
-        </aside>
-    </section>
-
-    <!-- IMAGEBILD -->
-    <section aria-label="Imagebild Hanf Kontor Weimar" style="margin-bottom: 2.5rem;">
-        <div class="hero-visual card">
-            <img src="imagebild-hanfkontor.png" alt="Imagebild Hanf Kontor Weimar mit Weimar-Motiv">
-        </div>
-    </section>
-
-    <!-- SORTIMENT -->
-    <section id="sortiment">
-        <h2>Unser Sortiment</h2>
-        <p class="lead">Eine Auswahl legaler Hanfprodukte und passenden Zubehörs.</p>
-
-        <div class="grid-2">
-            <div class="card">
-                <h3>Hanfprodukte &amp; CBD</h3>
-                <ul class="list-unstyled">
-                    <li>Hanf-Lebensmittel wie Tee und Snacks ohne berauschende Wirkung.</li>
-                    <li>CBD-Produkte wie Öle, Kapseln oder Kosmetik – ohne Heilversprechen.</li>
-                    <li>Pflegeprodukte mit Hanf- oder CBD-Anteil, z. B. Cremes oder Balsame.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Zubehör &amp; Lifestyle</h3>
-                <ul class="list-unstyled">
-                    <li>Papers, Filter, Grinder, Pfeifen und weitere Rauch-Accessoires.</li>
-                    <li>Vaporizer und Zubehör.</li>
-                    <li>Textilien, Taschen und Geschenkartikel rund um Hanf.</li>
-                    <li>Eines der größten Clipper-Sortimente in Thüringen.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- ÖFFNUNGSZEITEN -->
-    <section id="oeffnungszeiten">
-        <h2>Öffnungszeiten</h2>
-        <div class="card">
-            <table class="hours-table">
-                <tbody>
-                    <tr><th>Montag</th><td>11:00 – 18:00 Uhr</td></tr>
-                    <tr><th>Dienstag</th><td>11:00 – 18:00 Uhr</td></tr>
-                    <tr><th>Mittwoch</th><td>11:00 – 18:00 Uhr</td></tr>
-                    <tr><th>Donnerstag</th><td>11:00 – 18:00 Uhr</td></tr>
-                    <tr><th>Freitag</th><td>11:00 – 18:00 Uhr</td></tr>
-                    <tr><th>Samstag</th><td>11:00 – 15:00 Uhr</td></tr>
-                    <tr><th>Sonntag</th><td>geschlossen</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- KONTAKT -->
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <p class="lead">Sie erreichen uns am besten per E-Mail oder direkt im Laden.</p>
-
-        <div class="contact-grid">
-            <div class="card">
-                <h3>Adresse</h3>
-                Karl-Liebknecht Str. 2A<br>
-                99423 Weimar
-                <br><br>
-                <h3>E-Mail</h3>
-                hanf-kontor-weimar@online.de
-            </div>
-
-            <div class="card">
-                <h3>Kontaktformular</h3>
-                <!-- Hinweis: Für die echte Nutzung muss das Formular noch mit einem Maildienst verbunden werden. -->
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" name="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-Mail</label>
-                        <input id="email" type="email" name="email">
-                    </div>
-                    <div class="form-group full">
-                        <label for="subject">Betreff</label>
-                        <input id="subject" type="text" name="subject">
-                    </div>
-                    <div class="form-group full">
-                        <label for="message">Nachricht</label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
-                    <div class="form-group full">
-                        <button class="btn" type="submit">Absenden</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    <div class="footer-inner">
-        <div>© 2026 Hanf Kontor Weimar – Inhaber: Matthias Stelzer</div>
-        <div class="footer-links">
-            <a href="impressionen.html">Impressionen</a>
-            <a href="impressum.html">Impressum &amp; Datenschutz</a>
+        <div class="hero-highlights">
+            <span class="pill">Legale Hanfprodukte</span>
+            <span class="pill">CBD ohne Heilversprechen</span>
+            <span class="pill">Vaporizer &amp; Zubehör</span>
+            <span class="pill">Großes Clipper-Angebot in Thüringen</span>
         </div>
     </div>
-</footer>
 
-</body>
-</html>
+    <aside class="hero-box">
+        <div class="info-label">Adresse</div>
+        Karl-Liebknecht Str. 2A<br>
+        99423 Weimar
+        <br><br>
+        <div class="info-label">E-Mail</div>
+        hanf-kontor-weimar@online.de
+        <br><br>
+        <div class="info-label">Hinweis</div>
+        Alle angebotenen Produkte entsprechen den geltenden deutschen Gesetzen.
+    </aside>
+</section>
+
+<section>
+    <div class="hero-visual card">
+        <img src="imagebild-hanfkontor.png" alt="Imagebild Hanf Kontor Weimar">
+    </div>
+</section>
+
+<section id="sortiment">
+    <h2>Unser Sortiment</h2>
+    <p class="lead">Eine Auswahl legaler Hanfprodukte und passendem Zubehör.</p>
+
+    <div class="grid-2">
+        <div class="card">
+            <h3>Hanfprodukte &amp; CBD</h3>
+            <ul class="list-unstyled">
+                <li>Hanf-Lebensmittel wie Tee und Snacks ohne berauschende Wirkung.</li>
+                <li>CBD-Produkte wie Öle, Kapseln oder Kosmetik – ohne Heilversprechen.</li>
+                <li>Pflegeprodukte mit Hanf- oder CBD-Anteil.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Zubehör &amp; Lifestyle</h3>
+            <ul class="list-unstyled">
+                <li>Papers, Filter, Grinder, Pfeifen und Accessoires.</li>
+                <li>Vaporizer und Zubehör.</li>
+                <li>Textilien, Taschen und Geschenkartikel.</li>
+                <li>Eines der größten Clipper-Sortimente in Thüringen.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="oeffnungszeiten">
+    <h2>Öffnungszeiten</h2>
+    <div class="card">
+        <table class="hours-table">
+            <tr><th>Montag</th><td>11:00 – 18:00 Uhr</td></tr>
+            <tr><th>Dienstag</th><td>11:00 – 18:00 Uhr</td></tr>
+            <tr><th>Mittwoch</th><td>11:00 – 18:00 Uhr</td></tr>
+            <tr><th>Donnerstag</th><td>11:00 – 18:00 Uhr</td></tr>
+            <tr><th>Freitag</th><td>11:00 – 18:00 Uhr</td></tr>
+            <tr><th>Samstag</th><td>11:00 – 15:00 Uhr</td></tr>
+            <tr><th>Sonntag</th><td>geschlossen</td></tr>
+        </table>
+    </div>
+</section>
+
+<section id="kontakt">

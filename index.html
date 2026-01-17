@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Hanf Kontor Weimar – Ihr Fachgeschäft für Hanfprodukte</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Hanf Kontor Weimar in Weimar – Informationen zu Öffnungszeiten, Sortiment und Kontakt. Fachgeschäft für legale Hanfprodukte, CBD und Zubehör.">
+    <meta name="description" content="Hanf Kontor Weimar in Weimar – Informationen zu Öffnungszeiten, Sortiment und Kontakt. Fachgeschäft für legale Hanfprodukte, Zubehör und Growbedarf.">
     <style>
         :root {
             --primary: #16523a;
@@ -69,19 +69,23 @@
 
         main { max-width: var(--max-width); margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; }
 
+        section { margin-bottom: 2.5rem; }
+        section h2 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--primary); }
+
         .hero {
             display: grid;
             grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
             gap: 2rem;
-            margin-top: 1.5rem;
             margin-bottom: 2.5rem;
-            align-items: center;
         }
 
-        .hero-text h1 { font-size: clamp(2rem, 3vw, 2.6rem); margin-bottom: 0.75rem; color: var(--primary); }
-        .hero-text h2 { font-size: 1.1rem; color: var(--muted); margin-bottom: 1rem; }
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
 
-        .hero-highlights { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
         .pill {
             padding: 0.3rem 0.75rem;
             border-radius: 999px;
@@ -91,23 +95,6 @@
             font-size: 0.85rem;
         }
 
-        .hero-box {
-            background: #f2f7f4;
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            box-shadow: var(--shadow-soft);
-            border: 1px solid #d8e8dd;
-        }
-
-        .info-label { font-weight: 600; color: var(--muted); margin-bottom: 0.3rem; font-size: 0.85rem; }
-
-        .hero-visual img { max-width: 100%; display: block; border-radius: var(--radius); }
-
-        section { margin-bottom: 2.5rem; }
-        section h2 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--primary); }
-
-        .lead { color: var(--muted); font-size: 0.95rem; }
-
         .card {
             background: white;
             border-radius: var(--radius);
@@ -116,35 +103,40 @@
             border: 1px solid #e5e5e5;
         }
 
-        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
 
-        .list-unstyled { list-style: none; padding: 0; }
-        .list-unstyled li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
-        .list-unstyled li::before { content: "•"; position: absolute; left: 0; color: var(--primary); }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
 
-        .hours-table { width: 100%; border-collapse: collapse; }
-        .hours-table td, .hours-table th { padding: 0.4rem; text-align: left; }
-        .hours-table tbody tr:nth-child(odd) { background-color: #fafafa; }
+        ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
 
-        .contact-card p { margin: 0.3rem 0; }
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
 
-        /* Infofeld / Aktionsbox */
         .alert-box {
             background: #ffefc2;
             border-left: 6px solid #e0a800;
             padding: 1rem 1.25rem;
             border-radius: var(--radius);
-            font-size: 1rem;
             box-shadow: var(--shadow-soft);
-            margin-bottom: 2rem;
         }
-        .alert-box strong {
-            color: #8a6c00;
-        }
+
         .alert-box img {
             max-width: 100%;
-            height: auto;
-            display: block;
             border-radius: 8px;
             margin-bottom: 0.75rem;
         }
@@ -163,22 +155,15 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 0.5rem 1rem;
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
+            .grid-3 { grid-template-columns: 1fr; }
             .hero { grid-template-columns: 1fr; }
-            .grid-2 { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 640px) {
-            .nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .logo {
-                height: 70px;
-            }
+            .logo { height: 70px; }
         }
     </style>
 </head>
@@ -190,13 +175,11 @@
             <img src="logo-hanfkontor.png" class="logo" alt="Hanf Kontor Weimar Logo">
             <div class="brand-text">
                 <div class="brand-title">Hanf Kontor Weimar</div>
-                <div class="brand-sub">Lebensmittel · Kosmetik · Naturprodukte</div>
+                <div class="brand-sub">Fachgeschäft für Hanf & Zubehör</div>
             </div>
         </div>
         <nav class="nav-links">
             <a href="#sortiment">Sortiment</a>
-            <a href="#oeffnungszeiten">Öffnungszeiten</a>
-            <a href="impressionen.html">Impressionen</a>
             <a href="#info">Aktuelles</a>
             <a href="#kontakt">Kontakt</a>
             <a href="impressum.html">Impressum</a>
@@ -207,96 +190,72 @@
 <main>
 
 <section class="hero">
-    <div class="hero-text">
+    <div>
         <h1>Hanf Kontor Weimar</h1>
         <h2>Dein seriöser Ansprechpartner für legale Hanfprodukte in Weimar</h2>
-        <p>Im Hanf Kontor Weimar finden Sie eine sorgfältig ausgewählte Auswahl an legalen Hanfprodukten,
-        CBD-Artikeln sowie Zubehör rund um die Hanfpflanze.</p>
+        <p>Ausgewählte Produkte rund um Hanf, Zubehör und Growbedarf – sachlich, übersichtlich und gesetzeskonform.</p>
 
         <div class="hero-highlights">
             <span class="pill">Legale Hanfprodukte</span>
-            <span class="pill">CBD ohne Heilversprechen</span>
-            <span class="pill">Vaporizer &amp; Zubehör</span>
+            <span class="pill">Growbedarf</span>
+            <span class="pill">Design-Bongs</span>
             <span class="pill">Größtes Clipper Sortiment Thüringens</span>
         </div>
     </div>
-
-    <aside class="hero-box">
-        <div class="info-label">Adresse</div>
-        Karl-Liebknecht Str. 2A<br>
-        99423 Weimar
-        <br><br>
-        <div class="info-label">E-Mail</div>
-        <a href="mailto:hanf-kontor-weimar@online.de">hanf-kontor-weimar@online.de</a>
-        <br><br>
-        <div class="info-label">Hinweis</div>
-        Alle angebotenen Produkte entsprechen den geltenden deutschen Gesetzen.
-    </aside>
 </section>
 
-<!-- Aktuelles / Infofeld mit Freibier-Bild -->
 <section id="info">
     <div class="alert-box">
-        <img src="aktion-freibier.png" alt="Freibier-Aktion Hanf Kontor Weimar">
-        <strong>Aktion:</strong> Ab 15 € Einkauf gibt es eine Flasche Cannabis Bier gratis – 
-        Aktion nur solange der Vorrat reicht.
-    </div>
-</section>
-
-<section>
-    <div class="hero-visual card">
-        <img src="imagebild-hanfkontor.png" alt="Imagebild Hanf Kontor Weimar">
+        <img src="aktion-freibier.png" alt="Freibier Aktion">
+        <strong>Aktion:</strong> Ab 15 € Einkauf gibt es eine Flasche Cannabis Bier gratis – solange der Vorrat reicht.
     </div>
 </section>
 
 <section id="sortiment">
     <h2>Unser Sortiment</h2>
-    <p class="lead">Eine Auswahl legaler Hanfprodukte und passendem Zubehör.</p>
 
-    <div class="grid-2">
+    <div class="grid-3">
+
         <div class="card">
-            <h3>Hanfprodukte &amp; CBD</h3>
-            <ul class="list-unstyled">
-                <li>Hanf-Lebensmittel wie Tee und Snacks ohne berauschende Wirkung.</li>
-                <li>CBD-Produkte wie Öle, Kapseln oder Kosmetik – ohne Heilversprechen.</li>
-                <li>Pflegeprodukte mit Hanf- oder CBD-Anteil.</li>
+            <h3>Hanfprodukte</h3>
+            <ul>
+                <li>Legale Hanf- und CBD-Artikel (je nach Verfügbarkeit und Rechtslage)</li>
+                <li>Hanf-Lebensmittel wie Tee und Snacks</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>Zubehör &amp; Lifestyle</h3>
-            <ul class="list-unstyled">
-                <li>Papers, Filter, Grinder, Pfeifen und Accessoires.</li>
-                <li>Vaporizer und Zubehör.</li>
-                <li>Textilien, Taschen und Geschenkartikel.</li>
-                <li>Größtes Clipper Sortiment Thüringens.</li>
+            <h3>Raucherzubehör & Design</h3>
+            <ul>
+                <li>Papers, Filter, Grinder, Pfeifen und Zubehör</li>
+                <li>Bongs und Glaswaren namhafter Hersteller</li>
+                <li>Design-Bongs und besondere Glasartikel</li>
+                <li>Vaporizer und Zubehör</li>
+                <li>Größtes Clipper Sortiment Thüringens</li>
             </ul>
         </div>
-    </div>
-</section>
 
-<section id="oeffnungszeiten">
-    <h2>Öffnungszeiten</h2>
-    <div class="card">
-        <table class="hours-table">
-            <tr><th>Montag</th><td>11:00 – 18:00 Uhr</td></tr>
-            <tr><th>Dienstag</th><td>11:00 – 18:00 Uhr</td></tr>
-            <tr><th>Mittwoch</th><td>11:00 – 18:00 Uhr</td></tr>
-            <tr><th>Donnerstag</th><td>11:00 – 18:00 Uhr</td></tr>
-            <tr><th>Freitag</th><td>11:00 – 18:00 Uhr</td></tr>
-            <tr><th>Samstag</th><td>11:00 – 15:00 Uhr</td></tr>
-            <tr><th>Sonntag</th><td>geschlossen</td></tr>
-        </table>
+        <div class="card">
+            <h3>Growbedarf & Zubehör</h3>
+            <ul>
+                <li>Hanfsamen zum Anbau</li>
+                <li>Growboxen und Beleuchtungssysteme</li>
+                <li>Lüftungs- und Klimakomponenten (z. B. Ventilatoren)</li>
+                <li>Erden, Substrate und Dünger</li>
+                <li>Ernte- und Weiterverarbeitungszubehör</li>
+                <li>Räucherstäbchen und Räucherzubehör</li>
+                <li>Getränke und Spirituosen (z. B. Bier, Wein, Gin, Vodka, Absinth, Heierlikör)</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
 <section id="kontakt">
     <h2>Kontakt</h2>
-    <div class="card contact-card">
-        <h3>Kontaktinformationen</h3>
-        <p><strong>Adresse:</strong><br>Karl-Liebknecht Str. 2A, 99423 Weimar</p>
+    <div class="card">
+        <p><strong>Adresse:</strong><br>Karl-Liebknecht-Str. 2A<br>99423 Weimar</p>
         <p><strong>E-Mail:</strong><br><a href="mailto:hanf-kontor-weimar@online.de">hanf-kontor-weimar@online.de</a></p>
-        <p>Wir freuen uns auf Ihre Nachricht oder Ihren Besuch im Ladengeschäft.</p>
     </div>
 </section>
 
@@ -304,11 +263,8 @@
 
 <footer>
     <div class="footer-inner">
-        © 2026 Hanf Kontor Weimar – Inhaber: Matthias Stelzer
-        <div>
-            <a href="impressionen.html">Impressionen</a> • 
-            <a href="impressum.html">Impressum</a>
-        </div>
+        © 2026 Hanf Kontor Weimar – Matthias Stelzer
+        <div><a href="impressum.html">Impressum</a></div>
     </div>
 </footer>
 

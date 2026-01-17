@@ -77,7 +77,11 @@
             grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
             gap: 2rem;
             margin-bottom: 2.5rem;
+            align-items: center;
         }
+
+        .hero-text h1 { margin: 0 0 0.75rem; color: var(--primary); font-size: clamp(2rem, 3vw, 2.6rem); }
+        .hero-text h2 { margin: 0 0 1rem; color: var(--muted); font-size: 1.1rem; font-weight: 500; }
 
         .hero-highlights {
             display: flex;
@@ -94,6 +98,16 @@
             border: 1px solid #d2e3d1;
             font-size: 0.85rem;
         }
+
+        .hero-box {
+            background: #f2f7f4;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #d8e8dd;
+        }
+
+        .info-label { font-weight: 600; color: var(--muted); margin-bottom: 0.3rem; font-size: 0.85rem; }
 
         .card {
             background: white;
@@ -112,10 +126,11 @@
         ul {
             list-style: none;
             padding: 0;
+            margin: 0.75rem 0 0;
         }
 
         ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.55rem;
             padding-left: 1.2rem;
             position: relative;
         }
@@ -137,9 +152,15 @@
 
         .alert-box img {
             max-width: 100%;
+            height: auto;
+            display: block;
             border-radius: 8px;
             margin-bottom: 0.75rem;
         }
+
+        .hours-table { width: 100%; border-collapse: collapse; }
+        .hours-table td, .hours-table th { padding: 0.4rem; text-align: left; }
+        .hours-table tbody tr:nth-child(odd) { background-color: #fafafa; }
 
         footer {
             border-top: 1px solid #e0e0e0;
@@ -155,6 +176,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 0.5rem 1rem;
         }
 
         @media (max-width: 900px) {
@@ -163,6 +185,7 @@
         }
 
         @media (max-width: 640px) {
+            .nav { flex-direction: column; align-items: flex-start; }
             .logo { height: 70px; }
         }
     </style>
@@ -181,6 +204,7 @@
         <nav class="nav-links">
             <a href="#sortiment">Sortiment</a>
             <a href="#info">Aktuelles</a>
+            <a href="#oeffnungszeiten">Öffnungszeiten</a>
             <a href="#kontakt">Kontakt</a>
             <a href="impressum.html">Impressum</a>
         </nav>
@@ -190,7 +214,7 @@
 <main>
 
 <section class="hero">
-    <div>
+    <div class="hero-text">
         <h1>Hanf Kontor Weimar</h1>
         <h2>Dein seriöser Ansprechpartner für legale Hanfprodukte in Weimar</h2>
         <p>Ausgewählte Produkte rund um Hanf, Zubehör und Growbedarf – sachlich, übersichtlich und gesetzeskonform.</p>
@@ -202,6 +226,18 @@
             <span class="pill">Größtes Clipper Sortiment Thüringens</span>
         </div>
     </div>
+
+    <aside class="hero-box">
+        <div class="info-label">Adresse</div>
+        Karl-Liebknecht Str. 2A<br>
+        99423 Weimar
+        <br><br>
+        <div class="info-label">E-Mail</div>
+        <a href="mailto:hanf-kontor-weimar@online.de">hanf-kontor-weimar@online.de</a>
+        <br><br>
+        <div class="info-label">Hinweis</div>
+        Alle angebotenen Produkte entsprechen den geltenden deutschen Gesetzen.
+    </aside>
 </section>
 
 <section id="info">
@@ -217,44 +253,72 @@
     <div class="grid-3">
 
         <div class="card">
-            <h3>Hanfprodukte</h3>
+            <h3>Hanfprodukte &amp; Lebensmittel</h3>
             <ul>
-                <li>Legale Hanf- und CBD-Artikel (je nach Verfügbarkeit und Rechtslage)</li>
-                <li>Hanf-Lebensmittel wie Tee und Snacks</li>
+                <li>Auswahl an legalen Hanf- und CBD-Artikeln (je nach Verfügbarkeit und Rechtslage)</li>
+                <li>Hanf-Lebensmittel wie Tee und Snacks ohne berauschende Wirkung</li>
+                <li>Kosmetik- und Pflegeartikel auf Hanfbasis (je nach Sortiment)</li>
+                <li>Getränkeauswahl, z. B. Bier, Eistee, Energy-Getränke, Prosecco und Wein</li>
+                <li>Spirituosen nach Verfügbarkeit, z. B. Gin, Vodka, Absinth, Rum, Liköre sowie Heierlikör</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>Raucherzubehör & Design</h3>
+            <h3>Raucherzubehör, Glaswaren &amp; Bücher</h3>
             <ul>
                 <li>Papers, Filter, Grinder, Pfeifen und Zubehör</li>
+                <li>Waagen und weiteres Kleinzubehör</li>
                 <li>Bongs und Glaswaren namhafter Hersteller</li>
                 <li>Design-Bongs und besondere Glasartikel</li>
                 <li>Vaporizer und Zubehör</li>
+                <li>Bücher und Informationsmaterial (je nach Verfügbarkeit)</li>
                 <li>Größtes Clipper Sortiment Thüringens</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>Growbedarf & Zubehör</h3>
+            <h3>Growbedarf &amp; Anbauzubehör</h3>
             <ul>
                 <li>Hanfsamen zum Anbau</li>
-                <li>Growboxen und Beleuchtungssysteme</li>
-                <li>Lüftungs- und Klimakomponenten (z. B. Ventilatoren)</li>
-                <li>Erden, Substrate und Dünger</li>
-                <li>Ernte- und Weiterverarbeitungszubehör</li>
-                <li>Räucherstäbchen und Räucherzubehör</li>
-                <li>Getränke und Spirituosen (z. B. Bier, Wein, Gin, Vodka, Absinth, Heierlikör)</li>
+                <li>Growboxen und Beleuchtungssysteme (Lampen)</li>
+                <li>Belüftungs- und Klimakomponenten (z. B. Ventilatoren)</li>
+                <li>Substrate (Erden) und Dünger</li>
+                <li>Ernte- und Weiterverarbeitungszubehör (z. B. Schneidwerkzeuge, Trocknungs- und Aufbewahrungslösungen)</li>
             </ul>
         </div>
 
+    </div>
+
+    <div class="card" style="margin-top:1.5rem;">
+        <h3>Räucherwerk</h3>
+        <ul>
+            <li>Verschiedene Räucherstäbchen</li>
+            <li>Räucherzubehör wie Halter, Schalen und weitere Räucherartikel</li>
+        </ul>
+    </div>
+</section>
+
+<section id="oeffnungszeiten">
+    <h2>Öffnungszeiten</h2>
+    <div class="card">
+        <table class="hours-table">
+            <tbody>
+                <tr><th>Montag</th><td>11:00 – 18:00 Uhr</td></tr>
+                <tr><th>Dienstag</th><td>11:00 – 18:00 Uhr</td></tr>
+                <tr><th>Mittwoch</th><td>11:00 – 18:00 Uhr</td></tr>
+                <tr><th>Donnerstag</th><td>11:00 – 18:00 Uhr</td></tr>
+                <tr><th>Freitag</th><td>11:00 – 18:00 Uhr</td></tr>
+                <tr><th>Samstag</th><td>11:00 – 15:00 Uhr</td></tr>
+                <tr><th>Sonntag</th><td>geschlossen</td></tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
 <section id="kontakt">
     <h2>Kontakt</h2>
     <div class="card">
-        <p><strong>Adresse:</strong><br>Karl-Liebknecht-Str. 2A<br>99423 Weimar</p>
+        <p><strong>Adresse:</strong><br>Karl-Liebknecht Str. 2A<br>99423 Weimar</p>
         <p><strong>E-Mail:</strong><br><a href="mailto:hanf-kontor-weimar@online.de">hanf-kontor-weimar@online.de</a></p>
     </div>
 </section>
@@ -264,7 +328,10 @@
 <footer>
     <div class="footer-inner">
         © 2026 Hanf Kontor Weimar – Matthias Stelzer
-        <div><a href="impressum.html">Impressum</a></div>
+        <div>
+            <a href="impressionen.html">Impressionen</a> •
+            <a href="impressum.html">Impressum</a>
+        </div>
     </div>
 </footer>
 
